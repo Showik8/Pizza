@@ -22,6 +22,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    
 }
 body{
      background: rgba(31, 31, 31, 0.277);
@@ -29,14 +30,13 @@ body{
      justify-content: center;
      align-items: center;
      padding-top: 50px;
-    
+     font-family: "DM Serif Display", serif;
 }
 .mainc{
     width: 1160px;
     height: 528px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 40px;
+    display: flex;
+    gap: 40px;
     
 }   
 .card{
@@ -60,11 +60,15 @@ body{
 .product{
     display: flex;
     justify-content: space-between;
+    font-family: "Open Sans", sans-serif;
 }
 .warwera{
     margin-left: 24px;
     margin-right: 24px;
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 24px;
 }
 
 h1{
@@ -80,21 +84,17 @@ h1{
 }
 
 span{
-color: rgba(110, 121, 140, 1);
-font-family: Open Sans;
-font-size: 16px;
-line-height: 25px;
-letter-spacing: 0em;
-text-align: left;
-position: relative;
-top: 24px;
+    color: rgba(110, 121, 140, 1);
+    font-family: Open Sans;
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: 0em;
 }
 
 .calinfo {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 34px;
     p {
         font-size: 16px;
         line-height: 25px;
@@ -106,13 +106,12 @@ top: 24px;
 .price{
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   width: 300px;
-  position: relative;
-  left: 30px;
-  top: 41px;
   gap: 10px;
    h2{
-    font-family: DM Serif Display;
+    font-family:dm-serif ;
     font-size: 28px;
     line-height: 25px;
     letter-spacing: 0em;
@@ -123,14 +122,12 @@ top: 24px;
     font-size: 20px;
     line-height: 25px;
     letter-spacing: 0em;
-    text-align: left;
+    padding-right: 30px;
     color: rgba(248, 89, 59, 1);
    }
    button{
     width: 114px;
     height: 44px;
-    top: -5px;
-    left: 30px;
     background-color: rgba(46, 204, 113, 1);
     border-radius: 4px;
     font-family: Open Sans;
@@ -140,19 +137,18 @@ top: 24px;
     letter-spacing: 0.18em;
     text-align: center;
     color: rgba(255, 255, 255, 1);
-    position: relative;
     border:none;
    }
 }
 
 @media (max-width:800px) {
-    .mainc {
-      display: grid;
-      grid-template-columns: 1fr;
-      height: 100svh;
-      width: 100svw;
-      position: relative;
-      left: 50%;
     }
+    .mainc{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 30px;
+        height: 100svh;
     }
+   
   
